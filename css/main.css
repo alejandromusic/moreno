@@ -1,0 +1,504 @@
+#bg, #search-bg {
+    background-image: url('../img/radar.jpg');
+    background-repeat: no-repeat;
+    background-size: 1080px auto;
+}
+
+#bg {
+    background-position: center top;
+    padding: 50px 90px 120px 90px;
+    margin-bottom: 50px;
+}
+
+#search-container {
+    position: relative;
+    top: 50px;
+}
+
+#search-bg {
+    /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+
+
+    /* Pull the background 70px higher to the same place as #bg's */
+    background-position: center -70px;
+
+    -webkit-filter: blur(10px);
+    filter: url('/media/blur.svg#blur');
+    filter: blur(15px);
+}
+
+#search {
+    /* Put this on top of the blurred layer */
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    background: rgb(34, 34, 34); /* for IE */
+    background: rgba(34, 34, 34, 0.75);
+    border-radius: 15px;
+}
+
+@media (max-width: 600px ) {
+    #bg {
+        padding: 10px;
+        height: 425px;
+    }
+
+    #search-bg {
+        background-position: center -10px;
+    }
+}
+
+#search h2, #search h4 , #search h5, #search h5 a {
+    text-align: center;
+    color: #f1f1f1;
+}
+
+#search h2 {
+    margin-top: 40px;
+    margin-bottom: 33px;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+#search h4 {
+    margin-bottom: 18px;
+    font-weight: normal;
+    font-size: 12pt;
+}
+
+#search h5 {
+    margin-top: 40px
+}
+
+* {
+    box-sizing: border-box;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class * ="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0063B1;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.98;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 2.5px 0 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+ul a:hover {
+    background-color: #4D97D3;
+}
+
+li.title {
+    float: left;
+    left: 53px;
+    position: relative;
+}
+
+li.title a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.menu ol {
+    list-style: inside;
+    margin: 0;
+    padding: 0;
+    list-style-type: decimal;
+}
+
+.menu li {
+
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #F1F1F1;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 6px 0px 6px 25px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 1px;
+
+}
+
+.menu li:hover {
+
+    background-color: #0099cc;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.19), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+}
+
+/* Navigation Bar */
+
+/* Navigation Bar Sliding Box */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color: #F1F1F1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 0.95;
+
+}
+
+/* Navigation Bar Sliding Box Text */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Navigation Bar Sliding Box Text Effect */
+
+.sidenav a:hover, .offcanvas a:focus {
+    color: #C1C1C1;
+}
+
+/* Navigation Bar Exit Button */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+}
+
+/* Navigation Bar Button */
+
+#main {
+    transition: margin-left .5s;
+    padding: 1px;
+    top: 2px;
+    left: 12px;
+    position: fixed;
+    color: #fff;
+    z-index: 2;
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Auto Hide Effect */
+
+@media screen and (max-width: 500px) {
+    section {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #main {
+        display: none;
+    }
+}
+
+img {
+    z-index: 3;
+    position: fixed;
+    top: 2.5px;
+    left: 2.5px;
+}
+
+/* Button main */
+
+.div7 {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    width: 260px;
+    height: 50px;
+    background-color: #007A3F;
+    padding: 15px;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+    animation-direction: alternate;
+    -webkit-filter: drop-shadow(2px 2px 2px 4px black); /* Safari */
+    filter: drop-shadow(0px 4px 4px #D7D7D7);
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        background-color: #4285F4;
+    }
+
+    to {
+        background-color: #8EADDF;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {
+        background-color: #4285F4;
+    }
+
+    to {
+        background-color: #8EADDF;
+    }
+}
+
+.div7 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: white;
+	font-weight: bold;
+}
+
+.div7 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.div7:hover span {
+    padding-right: 25px;
+}
+
+.div7:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* Navigation Bar End */
+
+
+/* Table of contents */
+#listTitle
+{
+    list-style: none;
+    display: block;
+}
+
+#tableContents li {
+    opacity: 0.7;
+}
+
+/* main area */
+.main {
+    font-family: 'Times New Roman';
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 18pt;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.main p {
+    font-size: 14pt;
+}
+
+#subMain {
+    font-size: 12pt;
+    margin-top: 30px;
+    line-height: 16pt;
+}
+
+
+

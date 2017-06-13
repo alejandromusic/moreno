@@ -1,0 +1,20 @@
+<head>
+<body>
+
+<video width="800" height="400" autoplay controls id="videoPlayer">
+  <source src="../vids/ASIMO.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+</video>
+<script>
+var nextVideo = ["http://www.w3schools.com/html/mov_bbb.mp4","../vids/Case 1. Bentwaters – Woodbridge December 26, 1980.mp4","../vids/Case 2. Father William Gill about his encounter with UFO.mp4","../vids/Case 3 UFO Close Encounter of the Third Kind - Colares , Brazil 1977.mp4","../vids/Case 4 - The Westfall Case.mp4","../vids/Case 12. Kelly Kentucky case, August 21, 1955. (1 - 2).mp4","../vids/Case 14 - Michiga Case.mp4","../vids/JAPAN AIRLINES FLIGHT 1628 UFO INCIDENT.mp4","vids/Kelly Johnson's UFO Encounter - Lockheed UFO Case.mp4","../vids/Little Green Men - Kentucky Life - KET.mp4","../vids/Neil Armstrong’s accident.mp4","../vids/Sgt. James Penniston USAF NPC 11 Nov 12 , 2007.mp4","../vids/The Coyne UFO incident - Mansfield, Ohio 1973.mp4","../vids/The tape recording of Colonel Halt.mp4","../vids/UFO - Encounters in australia (part1-3).mp4","../vids/UFO - Encounters in australia (part2-3).mp4","../vids/UFO - Encounters in australia (part3-3).mp4","../vids/UFO in Trumbull County Ohio 1994 Part [01-03].mp4","../vids/UFO in Trumbull County Ohio 1994 Part [02-03].mp4","../vids/UFO TED PHILLIPS   The Physical Evidence for Unidentified Flying Objects.mp4","../vids/UFO's Are Here - 1977 - Stan Deyo (Full Length), rare recording.avi.mp4","../vids/UFOs Are Real.mp4","../vids/UFOs in Australia & New Zealand.mp4","../vids/UFOs-%20I%20KNOW%20WHAT%20I%20SAW%20-%202016%20Best%20UFO%20HD%20Movie%20UFOTV%C2%AE.mp4","../vids/Witness Interviews Westall Australia case.mp4"];
+var curVideo = 0;
+var videoPlayer = document.getElementById('videoPlayer');
+videoPlayer.onended = function(){
+		++curVideo;
+    if(curVideo < nextVideo.length){    		
+        videoPlayer.src = nextVideo[curVideo];        
+    } 
+}
+</script>
